@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "8940720f-3c74-41f2-95aa-f70dbc1c0876",
+		"name": "Nasa Arayüz Çağrıları",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nasaarayüzçağrısı",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dünyayayakınobjeler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-07-22&end_date=2021-07-29&api_key=FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"neo",
+						"rest",
+						"v1",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2021-07-22"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-07-29"
+						},
+						{
+							"key": "api_key",
+							"value": "FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.nasa.gov/planetary/apod?api_key=FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "FrNa2JEA5V5b5VzMuCm94RSs45L82n7DnoCMPvan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

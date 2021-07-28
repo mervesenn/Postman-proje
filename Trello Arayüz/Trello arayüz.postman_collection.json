@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "dbd69ae8-97f1-4345-9833-52e62c7eda2e",
+		"name": "Trello arayüz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Trello pano oluşturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Başarılı board oluşturuldu\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{anaUrl}}/1/boards/?key={{keytrello}}&token={{tokentrello}}&name=TrelloArayüz",
+					"host": [
+						"{{anaUrl}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{keytrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{tokentrello}}"
+						},
+						{
+							"key": "name",
+							"value": "TrelloArayüz"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello liste oluşturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Başarılı list oluşturuldu\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{anaUrl}}/1/lists?key={{keytrello}}&token={{tokentrello}}&name=Test Ediliyor&idBoard=60fb52db4c7c7e5cfa01d842",
+					"host": [
+						"{{anaUrl}}"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{keytrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{tokentrello}}"
+						},
+						{
+							"key": "name",
+							"value": "Test Ediliyor"
+						},
+						{
+							"key": "idBoard",
+							"value": "60fb52db4c7c7e5cfa01d842"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello kart oluşturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Başarılı card oluşturuldu\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{anaUrl}}/1/cards?key={{keytrello}}&token={{tokentrello}}&idList=60fb5563059ffe75ecd7766b",
+					"host": [
+						"{{anaUrl}}"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{keytrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{tokentrello}}"
+						},
+						{
+							"key": "idList",
+							"value": "60fb5563059ffe75ecd7766b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello kontrol listesi oluşturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Başarılı checklist oluşturuldu\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{anaUrl}}/1/checklists?key={{keytrello}}&token={{tokentrello}}&idCard=60fb569da966c6486e522508",
+					"host": [
+						"{{anaUrl}}"
+					],
+					"path": [
+						"1",
+						"checklists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{keytrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{tokentrello}}"
+						},
+						{
+							"key": "idCard",
+							"value": "60fb569da966c6486e522508"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello etiket oluşturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Başarılı label oluşturma\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{anaUrl}}/1/labels?key={{keytrello}}&token={{tokentrello}}&name=TrelloProje&color=purple&idBoard=60fb52db4c7c7e5cfa01d842",
+					"host": [
+						"{{anaUrl}}"
+					],
+					"path": [
+						"1",
+						"labels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{keytrello}}"
+						},
+						{
+							"key": "token",
+							"value": "{{tokentrello}}"
+						},
+						{
+							"key": "name",
+							"value": "TrelloProje"
+						},
+						{
+							"key": "color",
+							"value": "purple"
+						},
+						{
+							"key": "idBoard",
+							"value": "60fb52db4c7c7e5cfa01d842"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
